@@ -19,7 +19,6 @@ export class DataManipulator {
     const ratio = priceABC / priceDEF;
     const upperBound = 1 + .10;
     const lowerBound = 1 - .10;
-    return serverResponds.map((el: any) => {
       return {
         price_abc: priceABC,
         price_def: priceDEF,
@@ -29,6 +28,5 @@ export class DataManipulator {
         lower_bound:  lowerBound,
         trigger_alert: (ratio > upperBound || ratio < lowerBound) ? ratio : undefined,
       };
-    })
   }
 }
